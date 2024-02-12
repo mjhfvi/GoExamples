@@ -4,18 +4,29 @@ import "fmt"
 
 func main() {
 
-	var a = "initial"
-	fmt.Println(a)
+	i := 1
+	for i <= 3 {
+		fmt.Println(i)
+		i = i + 1
+	}
 
-	var b, c int = 1, 2
-	fmt.Println(b, c)
+	for j := 0; j < 3; j++ {
+		fmt.Println(j)
+	}
 
-	var d = true
-	fmt.Println(d)
+	for i := range 3 {
+		fmt.Println("range", i)
+	}
 
-	var e int
-	fmt.Println(e)
+	for {
+		fmt.Println("loop")
+		break
+	}
 
-	f := "apple"
-	fmt.Println(f)
+	for n := range 6 {
+		if n%2 == 0 {
+			continue
+		}
+		fmt.Println(n)
+	}
 }
