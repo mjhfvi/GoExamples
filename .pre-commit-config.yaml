@@ -117,12 +117,12 @@ repos:
         name: gitleaks (Gitleaks is for detecting and preventing hardcoded secrets)
         exclude: .secrets.baseline
 
-  # - repo: https://github.com/thoughtworks/talisman
-  #   rev: v1.32.0    # Update me!
-  #   hooks:
-  #     - id: talisman-commit
-  #       name: talisman (scans git changesets to ensure that potential secrets or sensitive information)
-  #       entry: cmd --githook pre-commit
+  - repo: https://github.com/thoughtworks/talisman
+    rev: v1.32.0    # Update me!
+    hooks:
+      - id: talisman-commit
+        name: talisman (scans git changesets to ensure that potential secrets or sensitive information)
+        entry: cmd --githook pre-commit
 
   # - repo: https://github.com/gitguardian/ggshield  # need token for use
   #   rev: v1.24.0
